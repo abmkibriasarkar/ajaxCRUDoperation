@@ -21,7 +21,7 @@
         <td>Action</td>
       </tr>
       <?php
-        $sql = "select * From `guests`";
+        $sql = "Select * From `guests`";
         $result = $conn->query($sql);
 
         if($result->num_rows > 0){

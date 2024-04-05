@@ -9,6 +9,7 @@
                 l_name: $("#l_name").val(),
                 email: $("#email").val(),
                 gender: $("#gender").val(),
+                id: $("#id").val(),
             }
 
             $.ajax({
