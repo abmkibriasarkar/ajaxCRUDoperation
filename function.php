@@ -2,14 +2,14 @@
     require 'config.php';
 
     if(isset($_POST["action"])){
-        if(isset($_POST["action"]) == "insert"){
+        if($_POST["action"] == "insert"){
             insert();
-        }
-        if(isset($_POST["action"]) == "edit"){
+        }elseif($_POST["action"] == "edit"){
             edit();
         }else{
-            // delete();
-        }
+            delete();
+        }      
+   
     }
 
     function insert(){
@@ -52,4 +52,18 @@
             echo "Not edited.";
         }
     }
+
+    function delete(){
+        global $conn;
+
+        $id = $_POST["action"];
+
+        $sql="delete from  `guests` where `id`='$id' ";
+        $result=$conn->query($sql);
+
+        if($result === true){
+            echo "Delete Successfully.";
+        }
+    }
+
 ?>

@@ -28,7 +28,7 @@
             $i = 1;
        ?>
           <?php foreach($result as $row) : ?>
-            <tr>
+            <tr id = <?php echo $row["id"]; ?>>
               <td><?php echo $i++; ?></td>
               <td><?php echo $row["id"] ?></td>
               <td><?php echo $row["first_name"]; ?></td>
@@ -38,7 +38,8 @@
               <td><?php echo $row["reg_date"]; ?></td>
               <td>
                 <a href="editguest.php?id=<?php echo $row['id']; ?>">Edit</a>
-                <button type="button" onclick = "submitData(<?php echo $row['id']; ?>);">Delete</button>
+                <!-- <button type="button" onclick = "submitData('<?php echo $row['id']; ?>');">Delete</button> -->
+                <button type="button" onclick = "submitData('<?php echo $row['id']; ?>');">Delete</button>
               </td>
             </tr>
           <?php endforeach; ?>           

@@ -5,11 +5,11 @@
         $(document).ready(function(){
             var data = {
                 action: action,
+                id: $("#id").val(),
                 f_name: $("#f_name").val(),
                 l_name: $("#l_name").val(),
                 email: $("#email").val(),
                 gender: $("#gender").val(),
-                id: $("#id").val(),
             }
 
             $.ajax({
